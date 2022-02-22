@@ -8,6 +8,11 @@ Intial thought on what games will be included:
 * Flappy Bird (this only needs a joystick)
 * and more (probably a game that two players can play together)
 ## Prototype Setup
+Proposed Materials:
+* I2C 20x04 LCD Display Module
+* Joystick
+* Button
+* Resistor
 Fritzing diagram placeholder<br/>
 description of used components 
 ## Implementation
