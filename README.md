@@ -11,6 +11,6 @@ Intial thought on what games will be included:
 Fritzing diagram placeholder<br/>
 description of used components 
 ## Implementation
-## Discussion
+## Discussion and Demonstration
 ## Conclusion
 ## Reference
