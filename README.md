@@ -13,6 +13,7 @@ Proposed Materials:
 * Joystick
 * Button
 * Resistor
+
 Fritzing diagram placeholder<br/>
 description of used components 
 ## Implementation
