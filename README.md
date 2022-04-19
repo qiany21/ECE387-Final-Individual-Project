@@ -4,7 +4,7 @@ This project is a collection of LCD games on Arduino that served as a kid toy. R
 Intial thought on what games will be included (It depends on how much time I have):
 
 * Snake (Absolutely classic, this only needs a joystick)
-* Space Invaders (this needs a joystick and a button to fire)
+* Space Impact (this needs a joystick)
 * Flappy Bird (this only needs a joystick)
 * and more (probably a game that two players can play together)
 
