@@ -128,7 +128,7 @@ Snake
 ~~~~~~
 The default length of the snake is 2 and the snake will move to the right by default. The restriction of a snake's move is that it can not turn in the opposite direction when it is moving in one direction which means for example it can not turn left when it is moving right.
 
-The most important part of Snake is to paint its body. Arrays are used to hold coordinate values for each square of the snake body, and the drawSnake() function is used to draw a custom shape to represent the snake square.
+The most important part of Snake is to paint its body. Arrays are used to hold coordinate values for each square of the snake body, and the drawSnake() function is used to draw a custom shape to represent the snake square. Each time the position of the snake head changes, traverse the entire coordinate array from the tail forward, move each body piece position forward, and then traverse the coordinate array again and call the drawSnake() and drawGame() method to redraw the entire snake body.
 ::
 
   // arrays to store snake position
@@ -146,9 +146,12 @@ The most important part of Snake is to paint its body. Arrays are used to hold c
     drawFood();
   }
 
-Each time the position of the snake head changes, traverse the entire coordinate array from the tail forward, move each body piece position forward, and then traverse the coordinate array again and call the drawSnake() and drawGame() method to redraw the entire snake body.
-
 The random seed is first initialized in setup() by randomSeed() function. random() can then be used to generate the coordinate data, where in addition to specifying the region, we also need to consider excluding the food generated in the snake.
+::
+
+  randomSeed(analogRead(3));
+  foodX = random(0, 20);
+  foodY = random(0, 4);
 
 In this game, the joystick module is used to identify different operations up, down, left and right through the data collected through analog pins, and then change the coordinates of the snake head accordingly. When the snake body is redrawn, the whole snake moves once.
 
