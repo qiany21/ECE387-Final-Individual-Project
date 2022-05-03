@@ -51,6 +51,8 @@ How to Use Each Component
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 **I2C LCD:**
 
+Each of these characters on the LCD is a grid of 5×8 pixels. We can customize these characters by using LCD Custom Character Generator: https://maxpromer.github.io/LCD-Character-Creator/
+
 Connection:
 
 | Analog Pin 4 -> SDA
@@ -121,16 +123,22 @@ SW  -> Pin 2
 
 Implementation
 --------------
+
 Snake
 ~~~~~~
-The most important part of the Snake is to paint its body. Arrays are used to hold coordinate values for each square of the snake body, and the drawSnake() function is used to draw a custom shape to represent the snake square.
+The default length of the snake is 2 and the snake will move to the right by default. The restriction of a snake's move is that it can not turn in the opposite direction when it is moving in one direction which means for example it can not turn left when it is moving right.
+The most important part of Snake is to paint its body. Arrays are used to hold coordinate values for each square of the snake body, and the drawSnake() function is used to draw a custom shape to represent the snake square.
 Each time the position of the snake head changes, traverse the entire coordinate array from the tail forward, move each body piece position forward, and then redraw the entire snake body.
 The random seed is first initialized in setup() by randomSeed() function. random() can then be used to generate the coordinate data, where in addition to specifying the region, we also need to consider excluding the food generated in the snake.
 In this game, the joystick module is used to identify different operations up, down, left and right through the data collected through analog pins, and then change the coordinates of the snake head accordingly. When the snake body is redrawn, the whole snake moves once.
 The game ends when the coordinates of the snake head exceed the display area, i.e. the snake hits the wall, or when the coordinates of the snake head position match the coordinates of the other squares of the snake body, i.e. the snake eats itself.
 
+This game is fairly easy compared to Space Impact.
+
 Space Impact
 ~~~~~~~~~~~~
+Space Impact is very hard to implement. I spent most of time on making this game.
+The 
 
 Discussion and Demonstration
 ----------------------------
