@@ -215,9 +215,14 @@ Discussion and Demonstration
 ----------------------------
 Testing and Defensive Code
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Snake:**
+Snake game has a constant game speed, and it works smoothly without using millis() so that I did not consider this will be the problem. Snake game has a bunch of void functions that will be placed in loop(). The only function that takes in parameters is drawSnake(), I checked if the input parameters are valid or not. If not, the program will be paused for 5 seconds. Hence, it is very easy to notice whether such an earror exists or not. This is a crucial part when I debugged this game.
+
+
 
 
 **Space Impact:**
+All functions made for Space Impact will not take in any parameters so that there is no need to check if the input and output are valid or not. The only thing that I need to check is if the timing works perfectly or not.
 As the movement based on input from the joystick and the refresh of the screen are placed in loop(), the speed of the game is realized by changing the delay time by changing the delay function, so when the game speed is too slow, the joystick button operation becomes insensitive, that is, when I press the joystick to fire a bullet, and it takes longer time to fire. Other than this, the game is smooth. What I did is to try using timers to refresh the screen and vary the speed of the game by changing the timing. It helps the program keep running without pausing.
 ::
   void customDelay(unsigned long timer) {
@@ -226,6 +231,7 @@ As the movement based on input from the joystick and the refresh of the screen a
       readButton();
     }
   }
+For Testing, there are a few things that I need to notice. One is the bullet can be shot when the weapon load value is greater than or equal to 9. THe second is the bullet and the obstacle should vanish when the bullet hits against the obstacle. The third is the spaceship and the obstacle should vanish when the spaceship collides with the obstacle and the spaceship should be appear again at the same place. The number should decrease as well. There is no need to test the joystick because I have successfully used it for Snake.
 
 Conclusion
 ----------
