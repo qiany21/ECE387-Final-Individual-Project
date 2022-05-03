@@ -249,7 +249,10 @@ All in all, I seem to have a hard time finding interesting ideas or building int
 Reference
 ----------
 I2C LCD Tutorial: https://lastminuteengineers.com/i2c-lcd-arduino-tutorial/
+
 Joystick Tutorial: https://exploreembedded.com/wiki/Analog_JoyStick_with_Arduino
+
 Button Tutorial: https://www.instructables.com/Arduino-Button-Tutorial/
+
 Space Invader: https://www.hackster.io/john-bradnam/tiny-space-invaders-game-d1f3a8
 
