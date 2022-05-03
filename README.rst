@@ -217,10 +217,9 @@ Testing and Defensive Code
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 **Snake:**
 
-Snake game has a constant game speed, and it works smoothly without using millis() so that I did not consider this will be the problem. Snake game has a bunch of void functions that will be placed in loop(). The only function that takes in parameters is drawSnake(), I checked if the input parameters are valid or not. If not, the program will be paused for 5 seconds. Hence, it is very easy to notice whether such an earror exists or not. This is a crucial part when I debugged this game.
+Snake game has a constant game speed, and it works smoothly without using millis() so that I did not consider this will be the problem. Snake game has a bunch of void functions that will be placed in loop(). The only function that takes in parameters is drawSnake(), I checked if the input parameters are valid or not. If not, the program will be paused for 5 seconds. Hence, it is very easy to notice whether such an earror exists or not. This is a crucial part when I debugged this game. 
 
-
-
+For testing, just a couple things that are needed to validate. The first is the game should be over when the snake hits the wall or hits itself, and the snake cannot hit itself if the snake length is less then 4. The second thing to check is the snake cannot turn in the opposite direction. The third is the food should be auto-generated once the current food has been eaten by the snake.
 
 **Space Impact:**
 
@@ -233,7 +232,7 @@ As the movement based on input from the joystick and the refresh of the screen a
       readButton();
     }
   }
-For Testing, there are a few things that I need to notice. One is the bullet can be shot when the weapon load value is greater than or equal to 9. THe second is the bullet and the obstacle should vanish when the bullet hits against the obstacle. The third is the spaceship and the obstacle should vanish when the spaceship collides with the obstacle and the spaceship should be appear again at the same place. The number should decrease as well. There is no need to test the joystick because I have successfully used it for Snake.
+For testing, there are a few things that I need to notice. One is the bullet can be shot when the weapon load value is greater than or equal to 9. THe second is the bullet and the obstacle should vanish when the bullet hits against the obstacle. The third is the spaceship and the obstacle should vanish when the spaceship collides with the obstacle and the spaceship should be appear again at the same place. The number should decrease as well. There is no need to test the joystick because I have successfully used it for Snake.
 
 Conclusion
 ----------
