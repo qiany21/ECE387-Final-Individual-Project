@@ -128,7 +128,7 @@ Snake
 ~~~~~~
 The default length of the snake is 2 and the snake will move to the right by default. The restriction of a snake's move is that it can not turn in the opposite direction when it is moving in one direction which means for example it can not turn left when it is moving right.
 
-The most important part of Snake is to paint its body. Arrays are used to hold coordinate values for each square of the snake body, and the drawSnake() function is used to draw a custom shape to represent the snake square. Each time the position of the snake head changes, traverse the entire coordinate array from the tail forward, move each body piece position forward, and then traverse the coordinate array again and call the drawSnake() and drawGame() method to redraw the entire snake body.
+The most important part of Snake is to paint its body. Arrays are used to hold coordinate values for each square of the snake body, and the drawSnake() function is used to draw a custom shape to represent the snake square. Each time the position of the snake head changes, traverse the entire coordinate array from the tail forward, move each body piece position forward, and then traverse the coordinate array again and call the drawSnake() and drawGame() function to redraw the entire snake body.
 ::
 
   // arrays to store snake position
@@ -155,14 +155,48 @@ The random seed is first initialized in setup() by randomSeed() function. random
 
 In this game, the joystick module is used to identify different operations up, down, left and right through the data collected through analog pins, and then change the coordinates of the snake head accordingly. When the snake body is redrawn, the whole snake moves once.
 
-The game ends when the coordinates of the snake head exceed the display area, i.e. the snake hits the wall, or when the coordinates of the snake head position match the coordinates of the other squares of the snake body, i.e. the snake eats itself.
+The game ends when the coordinates of the snake head exceed the display area, i.e. the snake hits the wall, or when the coordinates of the snake head position match the coordinates of the other squares of the snake body, i.e. the snake eats itself. This is done by checkDie() function.
 
 This game is fairly easy compared to Space Impact.
 
 Space Impact
 ~~~~~~~~~~~~
 Space Impact is very hard to implement. I spent most of time on making this game.
-The life number and weapon load value are displayed at column 1 of the LCD. The spaceship is displayed at column 2, row 1 by default.
+The life number and weapon load value are displayed at column 1 of the LCD. The spaceship is displayed at column 2, row 1 by default. The spaceship can only fire a bullet when the weapon load is great than or equal to 9. The fire function is done by pressing the joystick.
+::
+  void readButton() {
+    if (digitalRead(BTNS) == LOW && fireValue >= conValue) {
+      fireValue -= conValue;
+      for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 18; j++) {
+          if (gameRegion[i][j] == SPACESHIP) {
+            // increaase by 4 means a bullet
+            gameRegion[i][j + 1] += BULLET;
+          }
+        }
+      }
+    }
+  }
+
+Space Impact is controlled through the joystick module just as the Snake. The difference is that I used a game region array that stores different values which indicates what should be displayed at each character. For example, 1 means a SPACESHIP, 2 means a OBSTACLE, 4 means a BULLET. The LCD display will be updated based on the game region array, and the game region array will be modified constantly through a variety of ways.
+::
+  uint8_t gameRegion[4][20];
+
+The first will be the spaceship movement. The position of the spaceship will be updated every time it takes in values from the joystick module. For example:
+::
+  // move left
+  if (yValue > 570 && j > 0) {
+    gameRegion[i][j] = BLANK;
+    gameRegion[i][j - 1] += SPACESHIP;
+  }
+  
+There are some objects on LCD that will move automatically. They are those obstacles and bullets that have been fired. They are done in updateRegion() function. The idea is the same as moving the spaceship.
+
+The most important part of this game is the resetRegion() function which will update the game region based on the values that are held in the game Region array. The function traverses the whole game region array and makes changes to the array based on the value that is held at each index. For more details, please refer to my code.
+
+Those functions that will make changes to the game region array will be called in loop() function to achieve a dynamic game.
+
+
 
 Discussion and Demonstration
 ----------------------------
