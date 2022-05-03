@@ -26,11 +26,12 @@ Proposed Materials
 - Button x 2
 - Resistor x 2
 
-Fritzing diagram placeholder
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-description of used components
+Description of Used Components
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Fritzing Diagram for Each Component
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Implementation
 --------------
