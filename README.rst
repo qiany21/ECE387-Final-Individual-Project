@@ -108,8 +108,6 @@ SW  -> Pin 2
 
 **Button:**
 
-Connection:
-
 ::
     
   int buttonPin = 2;
