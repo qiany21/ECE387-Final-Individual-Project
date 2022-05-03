@@ -190,13 +190,26 @@ The first will be the spaceship movement. The position of the spaceship will be 
     gameRegion[i][j - 1] += SPACESHIP;
   }
   
-There are some objects on LCD that will move automatically. They are those obstacles and bullets that have been fired. They are done in updateRegion() function. The idea is the same as moving the spaceship.
+There are some objects on LCD that will move automatically. They are those obstacles and bullets that have been fired. They are done in updateRegion() function. The idea is the same as moving the spaceship. Obstacles are auto generated based on the risk value, and the risk value is being updated as the game goes on.
+::
+  // update the score
+  // based on the score we have, the game difficulty increases
+  result++;
+  counter++;
+  if (counter % 100 == 0) {
+    waitTime -= 5;
+    riskValue += 3;
+    conValue--;
+  }
+  for (int i = 0; i < 4; i++) {
+    if (random(100) < riskValue) {
+      gameRegion[i][18] += OBSTACLE;
+    }
+  }
 
 The most important part of this game is the resetRegion() function which will update the game region based on the values that are held in the game Region array. The function traverses the whole game region array and makes changes to the array based on the value that is held at each index. For more details, please refer to my code.
 
 Those functions that will make changes to the game region array will be called in loop() function to achieve a dynamic game.
-
-
 
 Discussion and Demonstration
 ----------------------------
