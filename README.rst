@@ -213,7 +213,19 @@ Those functions that will make changes to the game region array will be called i
 
 Discussion and Demonstration
 ----------------------------
+Testing and Defensive Code
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
+**Space Impact:**
+As the movement based on input from the joystick and the refresh of the screen are placed in loop(), the speed of the game is realized by changing the delay time by changing the delay function, so when the game speed is too slow, the joystick button operation becomes insensitive, that is, when I press the joystick to fire a bullet, and it takes longer time to fire. Other than this, the game is smooth. What I did is to try using timers to refresh the screen and vary the speed of the game by changing the timing. It helps the program keep running without pausing.
+::
+  void customDelay(unsigned long timer) {
+    unsigned long tx = millis();
+    while (millis() - tx < timer) {
+      readButton();
+    }
+  }
 
 Conclusion
 ----------
