@@ -99,8 +99,8 @@ SW  -> Pin 2
     Serial.begin(9600);
   }
   void loop() {
-    xValue = analogRead(joyX);
-    yValue = analogRead(joyY);
+    int xValue = analogRead(joyX);
+    int yValue = analogRead(joyY);
     Serial.print(xValue);
     Serial.print("\t");
     Serial.println(yValue);
