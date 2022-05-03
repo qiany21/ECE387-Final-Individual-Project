@@ -234,6 +234,9 @@ As the movement based on input from the joystick and the refresh of the screen a
   }
 For testing, there are a few things that I need to notice. One is the bullet can be shot when the weapon load value is greater than or equal to 9. THe second is the bullet and the obstacle should vanish when the bullet hits against the obstacle. The third is the spaceship and the obstacle should vanish when the spaceship collides with the obstacle and the spaceship should be appear again at the same place. The number should decrease as well. There is no need to test the joystick because I have successfully used it for Snake.
 
+Demonstration Video Link: 
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Conclusion
 ----------
 
