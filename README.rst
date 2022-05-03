@@ -242,10 +242,14 @@ Conclusion
 
 Many of my classmates used the 3D-printing to make the product more aesthetic. I found out I ran out of time to do these, at least the prototype is working perfectly. In addition, I also did not make more games as I proposed early. The reason is that it is actually much harder to make a game and run on Arduino and LCD. I overestimated my ability to build games in Arduino IDE and work along with hardware.
 
-Finally, I think my understanding of embedded systems had a significant deviation between the beginning and the end of the course. Obviously, FPGA is directly related to embedded system. However, most of the embedded systems discussed and designed in class do not require FPGA. Many microcontrollers, or microprocessors, are sufficient to handle those operations. We cannot design an embedded system with high computational intensity and complexity, which is also the reason why FPGA does not appear in this course. Also, I found that even though the FPGA was not present in this lesson. I also can't seem to bring FPGA into my personal projects. I guess it would be a better choice for me to make a Final Project of ECE287 that I have not completed before.
+Finally, I think my understanding of embedded systems had a significant deviation between the beginning and the end of the course. Obviously, FPGA is directly related to embedded system. However, most of the embedded systems discussed and designed in class do not require FPGA. Many microcontrollers, or microprocessors, are sufficient to handle those operations. We cannot design an embedded system with high computational intensity and complexity, which is also the reason why FPGA does not appear in this course. Also, I found that even though the FPGA was not present in this course. I also can't seem to bring FPGA into my personal projects. I guess it would be a better choice for me to make a Final Project of ECE287 that I have not completed before because I love FPGA-related project.
 
 All in all, I seem to have a hard time finding interesting ideas or building interesting embedded systems in life. I prefer to build and design complex industrial products. Another possibility is that I am not innovative enough, which should be the direction of my personal development in the future.
 
 Reference
 ----------
+I2C LCD Tutorial: https://lastminuteengineers.com/i2c-lcd-arduino-tutorial/
+Joystick Tutorial: https://exploreembedded.com/wiki/Analog_JoyStick_with_Arduino
+Button Tutorial: https://www.instructables.com/Arduino-Button-Tutorial/
+Space Invader: https://www.hackster.io/john-bradnam/tiny-space-invaders-game-d1f3a8
 
