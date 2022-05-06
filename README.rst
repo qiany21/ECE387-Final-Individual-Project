@@ -217,7 +217,7 @@ Testing and Defensive Code
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 **Snake:**
 
-Snake game has a constant game speed, and it works smoothly without using millis() so that I did not consider this will be the problem. Snake game has a bunch of void functions that will be placed in loop(). The only function that takes in parameters is drawSnake(), I checked if the input parameters are valid or not. If not, the program will be paused for 5 seconds. Hence, it is very easy to notice whether such an earror exists or not. This is a crucial part when I debugged this game. 
+Snake game has a constant game speed, and it works smoothly without using millis() so that I did not consider this will be the problem. Snake game has a bunch of void functions that will be placed in loop(). The only function that takes in parameters is drawSnake(), I checked if the input parameters are valid or not. If not, the program will be paused for 5 seconds. Hence, it is very easy to notice whether such an earror exists or not. Another is the snake can hit itself only if the snake length is at least 4. Snake cannot hit itself its length is less than 4. So in checkDie() function, this is the first thing that is needed to be checked. These are crucial parts when I debugged this game. 
 
 For testing, just a couple things that are needed to validate. The first is the game should be over when the snake hits the wall or hits itself, and the snake cannot hit itself if the snake length is less then 4. The second thing to check is the snake cannot turn in the opposite direction. The third is the food should be auto-generated once the current food has been eaten by the snake.
 
