@@ -60,7 +60,7 @@ Connection:
 | 5V           -> VCC
 GND          -> GND
 
-
+.. image:: https://github.com/qiany21/ECE387-Final-Individual-Project/blob/main/Wiring-I2C-LCD-Display-with-Arduino.png
 
 | Basic code to use the I2C LCD: 
 ::
@@ -92,6 +92,8 @@ Connection:
 | VRy -> A1
 SW  -> Pin 2
 
+.. image:: https://github.com/qiany21/ECE387-Final-Individual-Project/blob/main/Joystick_with_Arduino.png
+
 | Basic code to use a Joystick: 
 ::
 
@@ -109,6 +111,8 @@ SW  -> Pin 2
   }
 
 **Button:**
+
+.. image:: https://github.com/qiany21/ECE387-Final-Individual-Project/blob/main/button_with_arduino.png
 
 ::
     
@@ -236,6 +240,8 @@ For testing, there are a few things that I need to notice. One is the bullet can
 
 Demonstration Video Link: 
 ~~~~~~~~~~~~~~~~~~~~~~~~~
+Snake Demo: https://www.youtube.com/shorts/UjCRQ7at4HU
+Space Impact Demo: https://www.youtube.com/watch?v=hD0sastdKdM
 
 Conclusion and Reflection
 --------------------------
